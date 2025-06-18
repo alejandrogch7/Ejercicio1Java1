@@ -11,12 +11,13 @@ public class Main {
         System.out.println("Enter your age: ");
         int studentAge = checkInput.nextInt();
 
-        StudentsScanner studentsScanner = new StudentsScanner();
-        studentsScanner.fullName = fullName;
-        studentsScanner.studentID = studentID;
-        studentsScanner.studentAge = studentAge;
+        Student student = new Student(fullName, studentID, studentAge);
 
-        studentsScanner.studentAcceptance( fullName, studentID, studentAge);
+        if (student.studentAge < 18){
+            System.out.println("sorry "+student.fullName+ "You can't get in");
+        } else {
+            System.out.println("Hello "+student.fullName+" with ID number "+student.studentID+ " WELCOME TO THIS UNIVERSITY!");
+        }
 
         checkInput.close();
     }

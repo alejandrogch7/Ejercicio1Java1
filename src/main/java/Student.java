@@ -1,15 +1,14 @@
 
-public class StudentsScanner {
+public class Student {
+
     public String fullName;
     public String studentID;
     public int studentAge;
 
-    public void studentAcceptance(String fullName, String studentID, int studentAge){
-        if (studentAge < 18){
-            System.out.println("sorry "+fullName+ "You can't get in");
-        } else {
-            System.out.println("Hello "+fullName+" with ID number "+studentID+ " Welcome IN!");
-        }
+    public Student(String fullName, String studentID, int studentAge){
+        this.fullName = fullName;
+        this.studentID = studentID;
+        this.studentAge = studentAge;
     }
 }
 
